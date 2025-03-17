@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Draco's Link Tree</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            background-image:
+                    radial-gradient(circle at 1px 1px, #4a2f2f 1px, transparent 0),
+                    radial-gradient(circle at 26px 26px, #333 1px, transparent 0);
+            background-size: 50px 50px;
+            color: #c0c0c0;
+            font-family: 'Source Code Pro', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1, h2 {
+            color: #50fa7b;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 300px; /* Set a max-width for better alignment */
+            margin: auto; /* Center align the list */
+            text-align: left; /* Left align the text */
+        }
+
+        ul li {
+            margin: 15px 0;
+            display: block;
+        }
+
+        a {
+            color: #bd93f9;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        a:hover, a:focus {
+            color: #ff79c6;
+            outline: none;
+            text-shadow: 0 0 10px #ff5733;
+        }
+
+        pre {
+            background-color: #282a36;
+            color: #f8f8f2;
+            border: 1px solid #44475a;
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 30px;
+        }
+
+        .trail {
+            position: absolute;
+            background: #ff5555;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: trailAnim linear forwards;
+        }
+
+        @keyframes trailAnim {
+            to {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Windy City Furs</h1>
+<ul>
+    <li><a href="https://bsky.app/profile/windycityfurs.com">BlueSky</a></li>
+</ul>
+
+
+</body>
+</html>
