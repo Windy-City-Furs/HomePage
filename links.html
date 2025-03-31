@@ -3,90 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Draco's Link Tree</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <title>Windy City Furs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #121212;
-            background-image:
-                    radial-gradient(circle at 1px 1px, #4a2f2f 1px, transparent 0),
-                    radial-gradient(circle at 26px 26px, #333 1px, transparent 0);
-            background-size: 50px 50px;
-            color: #c0c0c0;
-            font-family: 'Source Code Pro', monospace;
-            text-align: center;
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 20px;
-            min-height: 100vh;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            min-height: 100vh;
             align-items: center;
         }
 
-        h1, h2 {
-            color: #50fa7b;
+        header, footer {
+            width: 100%;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
         }
 
-        ul {
+        header ul, footer ul {
             list-style-type: none;
             padding: 0;
-            max-width: 300px; /* Set a max-width for better alignment */
-            margin: auto; /* Center align the list */
-            text-align: left; /* Left align the text */
         }
 
-        ul li {
-            margin: 15px 0;
-            display: block;
+        header li, footer li {
+            display: inline;
+            margin: 0 10px;
         }
 
-        a {
-            color: #bd93f9;
+        a, .button {
+            color: #fff;
             text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
+            font-size: 1em;
         }
 
-        a:hover, a:focus {
-            color: #ff79c6;
-            outline: none;
-            text-shadow: 0 0 10px #ff5733;
+        .content {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
         }
 
-        pre {
-            background-color: #282a36;
-            color: #f8f8f2;
-            border: 1px solid #44475a;
-            padding: 10px;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin-top: 30px;
+        .carousel {
+            position: relative;
+            width: 100%;
+            /*max-width: 600px; !* Adjust based on your requirement *!*/
+            margin: 20px auto;
+            overflow: hidden;
         }
 
-        .trail {
+        .slides {
+            width: 100vw; /* Viewport width: makes the container take the full width of the viewport */
+            height: 100vh; /* Viewport height: makes the container take the full height of the viewport */
+            overflow: hidden;
+            position: relative;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
             position: absolute;
-            background: #ff5555;
-            border-radius: 50%;
-            pointer-events: none;
-            animation: trailAnim linear forwards;
+            opacity: 0;
+            background-size: cover; /* This ensures the images cover the slide area */
+            background-position: center; /* This centers the images in the slide */
+            animation: slideshow 30s infinite; /* Adjusted duration for slower transition */
+        }
+        .slide:nth-child(1) {
+            animation-delay: 0s;
+            background-image: url('res/bowling.jpg');
+        }
+        .slide:nth-child(2) {
+            animation-delay: 10s; /* Adjusted for longer visibility of each image */
+            background-image: url('res/galloping-ghost.jpg');
+        }
+        .slide:nth-child(3) {
+            animation-delay: 20s; /* Adjusted for longer visibility of each image */
+            background-image: url('res/logan-arcade.jpg');
+        }
+        @keyframes slideshow {
+            0%, 100% { opacity: 0; }
+            5%, 95% { opacity: 1; }
         }
 
-        @keyframes trailAnim {
-            to {
-                transform: scale(0);
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 <body>
 
-<h1>Windy City Furs</h1>
-<ul>
-    <li><a href="https://bsky.app/profile/windycityfurs.com">BlueSky</a></li>
-</ul>
+<header>
+    <ul>
+        <li><a href="about.html">About WCF</a></li>
+        <li><a href="upcoming-events.html">Upcoming Events</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+    </ul>
+    <ul>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+        <li><a href="organizers.html">Meet the Organizers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</header>
 
+<div class="content">
+    <h1>Windy City Furs - Meetup Events</h1>
+    <p>Chicago's premier furry meetup events!</p>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+        <div class="slides">
+            <div class="slide" style="background-image: url('res/bowling.jpg');"></div>
+            <div class="slide" style="background-image: url('res/galloping-ghost.jpg');"></div>
+            <div class="slide" style="background-image: url('res/logan-arcade.jpg');"></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <ul>
+        <li><a href="https://bsky.app/profile/windycityfurs">BlueSky</a></li>
+        <li><a href="https://instagram.com/windycityfurs">Instagram</a></li>
+        <li><a href="https://discord.com/invite/windycityfurs">Discord</a></li>
+        <li><a href="https://facebook.com/windycityfurs">Facebook</a></li>
+    </ul>
+</footer>
 
 </body>
 </html>
