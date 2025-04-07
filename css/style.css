@@ -88,12 +88,12 @@ html, body {
     max-width: 800px;
     padding: 20px;
     margin: 0 auto;
-    text-align: left; /* ✅ Default to left-aligned text */
+    text-align: left;
 }
 
 .content h1,
 .content h2 {
-    text-align: center; /* ✅ Keep headings centered */
+    text-align: center;
 }
 
 body {
