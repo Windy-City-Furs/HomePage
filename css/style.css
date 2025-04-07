@@ -1,0 +1,131 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+header, footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+header ul, footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header li, footer li {
+    display: inline;
+    margin: 0 10px;
+}
+
+a, .button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    flex: 1;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.carousel img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.carousel {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.content img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    display: block;
+    margin: 0 auto;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.content h1,
+.content h2 {
+    text-align: center;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-family: 'Roboto', sans-serif;
+}
+.content {
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+.content h2 {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+.content ul {
+    padding-left: 20px;
+    margin-bottom: 1em;
+}
+.content li {
+    margin-bottom: 0.5em;
+}
+.content h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.2em;
+}
