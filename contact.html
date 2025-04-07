@@ -1,0 +1,15 @@
+<div id="header"></div>
+<script>
+  function loadFragment(id, url) {
+    fetch(url)
+      .then(res => res.text())
+      .then(html => document.getElementById(id).innerHTML = html);
+  }
+
+  loadFragment('header', 'header.html');
+  loadFragment('footer', 'footer.html');
+</script>
+<link rel="stylesheet" href="style.css">
+
+<!-- your page content here -->
+<div id="footer"></div>
