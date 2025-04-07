@@ -82,3 +82,50 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: left; /* ✅ Default to left-aligned text */
+}
+
+.content h1,
+.content h2 {
+    text-align: center; /* ✅ Keep headings centered */
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    font-family: 'Roboto', sans-serif;
+}
+.content {
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+.content h2 {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+.content ul {
+    padding-left: 20px;
+    margin-bottom: 1em;
+}
+.content li {
+    margin-bottom: 0.5em;
+}
+.content h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.2em;
+}

@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Windy City Furs</title>
+    <title>Windy City Furmeets - Code of Conduct</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,48 +14,130 @@
 <div id="header"></div>
 
 <div class="content">
+    <img src="res/logos/wcf-logo-banner-lg.png" alt="Windy City Furmeets Logo"
+         style="max-width: 200px; display: block; margin: 0 auto 20px;"/>
     <h1>Code of Conduct</h1>
-    <p>Nice, you found the template</p>
-</div>
 
+    <p>Windy City Furmeets is committed to building an inclusive, respectful, and welcoming space for attendees of all
+        backgrounds. Our goal is to create events where everyone feels safe, valued, and free to express themselves
+        without fear of discrimination or harassment.</p>
+
+    <p>We work collaboratively with our venue hosts and vendors to maintain a safe and respectful environment. Our
+        policies complement venue rules and local laws, and our team is prepared to enforce them responsibly.</p>
+
+    <p>This Code of Conduct applies to all attendees, organizers, volunteers, vendors, and sponsors at our events, both
+        in person and online. It defines our expectations for behavior and outlines the process for addressing concerns
+        or violations.</p>
+
+    <h2>Our Community Standards</h2>
+
+    <p>Windy City Furmeets is dedicated to creating a safe, welcoming, and inclusive environment for everyone. Our community values respect, consent, and accountability. All participants are expected to uphold these standards to ensure a positive experience for all.</p>
+
+    <p>Understand that the impact of your actions matters more than your intent. Even well-meaning behavior can cause harm. Listen to feedback, and adjust your actions to ensure a respectful environment.</p>
+
+    <p>Take full responsibility for your alcohol or substance use. Follow all venue policies and applicable laws. Over-consumption or disruptive behavior will result in removal from the event. Our organizers work closely with venue staff to monitor and manage alcohol service responsibly.</p>
+
+    <p>Respect venue staff, property, policies, and all applicable local laws and regulations.</p>
+
+    <p>The following expectations apply to all participants:</p>
+
+    <ul>
+        <li>Treat all individuals with respect, in both words and actions, regardless of race, ethnicity, gender identity or expression, sexual orientation, disability, physical appearance, body size, age, religion, or personal background.</li>
+        <li>Always obtain explicit consent before physical contact or photographing other attendees.</li>
+        <li>Approach disagreements with constructive dialogue and a willingness to collaborate.</li>
+        <li>Actively support a harassment-free environment where everyone can participate safely and fully.</li>
+        <li>Be mindful of your presence in shared spaces and your impact on those around you.</li>
+    </ul>
+
+
+
+    <h2>Unacceptable Behavior</h2>
+    <ul>
+        <li>Harassment of any kind, including offensive verbal comments, deliberate intimidation, stalking, or unwelcome
+            attention.
+        </li>
+        <li>Non-consensual and unwanted physical contact or unwelcome sexual harassment.</li>
+        <li>Hate speech, slurs, or any behavior that marginalizes another person or group.</li>
+        <li>Sharing or threatening to share another person's private information (doxxing).</li>
+        <li>Inappropriate or non-consensual photography or recording.</li>
+        <li>Disruptive behavior of talks, presentations, or other event activities.</li>
+        <li>Displaying of distributing, explicit, violent, or otherwise inappropriate materials in event spaces.
+        </li>
+    </ul>
+
+    <h2>Weapons Policy</h2>
+    <p>To maintain a safe environment, weapons of any kind are prohibited at our events, subject to the policies of our
+        partner venues. This includes firearms, explosives, large knives, and realistic prop weapons.</p>
+    <p>Prop weapons that are part of a costume may be permitted if they are pre-approved, peace-bonded, and comply with venue
+        guidelines. Peace-bonding is the process of marking props to indicate they are safe and approved for event
+        use.</p>
+    <p>Event organizers and venue staff reserve the right to inspect and determine the suitability of any prop or item
+        at their discretion. Any item deemed unsafe will need to be removed from the premises immediately.</p>
+
+    <h2>Media & Photography Guidelines</h2>
+    <p>We encourage attendees to capture and share positive moments from our events. However, please respect the privacy
+        and consent of fellow participants at all times.</p>
+    <p>Before publicly sharing photos or videos that include others, ask for their permission. While we cannot control
+        public spaces, we expect our community to follow this standard of respect. If you are unsure, please check with
+        event organizers.</p>
+    <p>We also welcome anyone with privacy concerns to speak with organizers, and we will do our best to support and
+        accommodate requests regarding media sharing.</p>
+
+    <h2>Enforcement & Accountability</h2>
+    <p>Event staff and organizers are empowered to enforce this Code of Conduct. Responses to violations may include
+        verbal warnings, removal from the event without refund, or referral to local authorities if necessary.</p>
+    <p>We work directly with venue security or staff as needed to uphold safety standards. All reports will be handled
+        with discretion and care, with our priority being the safety and well-being of all participants.</p>
+
+    <h2>Reporting a Concern</h2>
+    <p>If you experience or witness behavior that violates this Code of Conduct, please report it to an organizer or
+        designated event staff member immediately. Reports can be made in person or via our contact page. We are
+        committed to addressing issues promptly and thoroughly.</p>
+    <p>Attendees and venue staff are encouraged to report concerns directly to our organizers. Our reporting process is
+        confidential, responsive, and respectful.</p>
+
+    <h2>Appeals & Resolution</h2>
+    <p>If you feel a decision regarding enforcement has been made in error, you may submit an appeal to the event
+        leadership team via our contact page. All appeals will be reviewed fairly and carefully to ensure transparency
+        and accountability.</p>
+</div>
 
 <div id="footer"></div>
 
 <script>
-  function loadFragment(id, url) {
+  function loadFragment (id, url) {
     fetch(url)
       .then(res => res.text())
       .then(html => {
-        document.getElementById(id).innerHTML = html;
-      });
+        document.getElementById(id).innerHTML = html
+      })
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    loadFragment('header', 'partials/header.html');
-    loadFragment('footer', 'partials/footer.html');
-  });
+  document.addEventListener('DOMContentLoaded', function () {
+    loadFragment('header', 'partials/header.html')
+    loadFragment('footer', 'partials/footer.html')
+  })
 </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.slide');
-    let currentIndex = 0;
+  document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.slide')
+    let currentIndex = 0
 
-    function showSlide(index) {
+    function showSlide (index) {
       slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
+        slide.classList.toggle('active', i === index)
+      })
     }
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
+    function nextSlide () {
+      currentIndex = (currentIndex + 1) % slides.length
+      showSlide(currentIndex)
     }
 
-    setInterval(nextSlide, 5000);
-  });
+    setInterval(nextSlide, 5000)
+  })
 </script>
 
 </body>
-
 </html>
