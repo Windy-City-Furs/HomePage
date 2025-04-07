@@ -51,7 +51,7 @@ h1, h2 {
     width: auto;
     max-width: 100%;
     height: auto;
-    max-height: 60vh; /* ✅ limits the height to 60% of the viewport */
+    max-height: 50vh; /* ✅ limits the height to 60% of the viewport */
     display: block;
     margin: 0 auto;
 }
@@ -73,7 +73,7 @@ h1, h2 {
 .content img {
     width: 100%;
     height: auto;
-    max-height: 40vh; /* ✅ scale to 60% of the viewport height */
+    max-height: 50vh; /* ✅ scale to 60% of the viewport height */
     display: block;
     margin: 0 auto;
 }
