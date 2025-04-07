@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code of Conduct - Windy City Furs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Windy City Furs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
-    <ul>
-        <li><a href="about.html">About WCF</a></li>
-        <li><a href="upcoming-events.html">Upcoming Events</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="code-of-conduct.html">Code of Conduct</a></li>
-    </ul>
-    <ul>
-        <li><a href="gallery.html">Photo Gallery</a></li>
-        <li><a href="organizers.html">Meet the Organizers</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</header>
+<div id="header"></div>
 
 <div class="content">
-    <h1>Windy City Furmeets Code of Conduct</h1>
 
-    <p>Our goal is to create an inclusive, safe, and welcoming environment for everyone, regardless of background. By participating, you agree to uphold these standards.</p>
+    <h1>Code of Conduct</h1>
+    <p>Our goal is to create an inclusive, safe, and welcoming environment for everyone, regardless of background. By
+        participating, you agree to uphold these standards.</p>
 
     <h2>Expected Behavior</h2>
     <ul>
@@ -65,14 +56,44 @@
     <p>If you believe you were unfairly accused, contact a group admin with your concerns.</p>
 </div>
 
-<footer>
-    <ul>
-        <li><a href="https://bsky.app/profile/windycityfurs">BlueSky</a></li>
-        <li><a href="https://instagram.com/windycityfurs">Instagram</a></li>
-        <li><a href="https://discord.com/invite/windycityfurs">Discord</a></li>
-        <li><a href="https://facebook.com/windycityfurs">Facebook</a></li>
-    </ul>
-</footer>
+
+<div id="footer"></div>
+
+<script>
+  function loadFragment (id, url) {
+    fetch(url)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById(id).innerHTML = html
+      })
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    loadFragment('header', 'partials/header.html')
+    loadFragment('footer', 'partials/footer.html')
+  })
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.slide')
+    let currentIndex = 0
+
+    function showSlide (index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index)
+      })
+    }
+
+    function nextSlide () {
+      currentIndex = (currentIndex + 1) % slides.length
+      showSlide(currentIndex)
+    }
+
+    setInterval(nextSlide, 5000)
+  })
+</script>
 
 </body>
+
 </html>

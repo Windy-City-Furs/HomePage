@@ -3,95 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windy City Furs</title>
+    <title>Code of Conduct - Windy City Furs</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f0f0f0;
-            color: #333;
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            align-items: center;
-        }
-
-        header, footer {
-            width: 100%;
-            padding: 20px 0;
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        header ul, footer ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        header li, footer li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        a, .button {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-        }
-
-        .content {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .carousel {
-            position: relative;
-            width: 100%;
-            /*max-width: 600px; !* Adjust based on your requirement *!*/
-            margin: 20px auto;
-            overflow: hidden;
-        }
-
-        .slides {
-            width: 100vw; /* Viewport width: makes the container take the full width of the viewport */
-            height: 100vh; /* Viewport height: makes the container take the full height of the viewport */
-            overflow: hidden;
-            position: relative;
-            padding-left: 30px;
-            padding-right: 30px;
-        }
-        .slide {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            opacity: 0;
-            background-size: cover; /* This ensures the images cover the slide area */
-            background-position: center; /* This centers the images in the slide */
-            animation: slideshow 30s infinite; /* Adjusted duration for slower transition */
-        }
-        .slide:nth-child(1) {
-            animation-delay: 0s;
-            background-image: url('res/bowling.jpg');
-        }
-        .slide:nth-child(2) {
-            animation-delay: 10s; /* Adjusted for longer visibility of each image */
-            background-image: url('res/galloping-ghost.jpg');
-        }
-        .slide:nth-child(3) {
-            animation-delay: 20s; /* Adjusted for longer visibility of each image */
-            background-image: url('res/logan-arcade.jpg');
-        }
-        @keyframes slideshow {
-            0%, 100% { opacity: 0; }
-            5%, 95% { opacity: 1; }
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -110,17 +24,9 @@
 </header>
 
 <div class="content">
-    <h1>Windy City Furs - Meetup Events</h1>
-    <p>Chicago's premier furry meetup events!</p>
+    <h1>Windy City Furmeets Code of Conduct</h1>
 
-    <!-- Carousel Section -->
-    <div class="carousel">
-        <div class="slides">
-            <div class="slide" style="background-image: url('res/bowling.jpg');"></div>
-            <div class="slide" style="background-image: url('res/galloping-ghost.jpg');"></div>
-            <div class="slide" style="background-image: url('res/logan-arcade.jpg');"></div>
-        </div>
-    </div>
+
 </div>
 
 <footer>
