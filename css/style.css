@@ -7,7 +7,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    align-items: center;
 }
 
 header, footer {
@@ -16,12 +15,13 @@ header, footer {
     background-color: #333;
     color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 header ul, footer ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 header li, footer li {
@@ -40,47 +40,32 @@ a, .button {
     max-width: 800px;
     padding: 20px;
     text-align: center;
+    margin: 0 auto;
 }
 
 h1, h2 {
     text-align: center;
 }
 
+.carousel img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh; /* ✅ limits the height to 60% of the viewport */
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Optional: spacing under image */
 .carousel {
-    position: relative;
-    width: 100vw;
-    overflow: hidden;
-    padding-top: 56.25%;
     margin-bottom: 20px;
 }
 
-.slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
+/* Optional: mobile tweaks */
 @media (max-width: 768px) {
-    .carousel {
-        padding-top: 75%;
+    .carousel img {
+        width: 100%;
+        height: auto;
     }
 }
