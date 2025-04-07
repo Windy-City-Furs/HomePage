@@ -69,3 +69,11 @@ h1, h2 {
         height: auto;
     }
 }
+
+.content img {
+    width: 100%;
+    height: auto;
+    max-height: 40vh; /* ✅ scale to 60% of the viewport height */
+    display: block;
+    margin: 0 auto;
+}
