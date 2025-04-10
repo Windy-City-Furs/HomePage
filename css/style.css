@@ -64,13 +64,13 @@ h1, h2 {
 
 @media (max-width: 768px) {
     .carousel img {
-        width: 100%;
+        width: 92%;
         height: auto;
     }
 }
 
 .content img {
-    width: 100%;
+    width: 80%;
     height: auto;
     max-height: 50vh;
     display: block;
@@ -104,7 +104,6 @@ body {
 }
 .content {
     max-width: 800px;
-    padding: 40px 20px;
 }
 
 .content h1 {
