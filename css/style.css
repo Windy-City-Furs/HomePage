@@ -59,12 +59,13 @@ h1, h2 {
 }
 
 .carousel {
-    margin-bottom: 20px;
+    margin-bottom: 6px;
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
     .carousel img {
-        width: 92%;
+        width: 60%;
         height: auto;
     }
 }
@@ -75,6 +76,7 @@ h1, h2 {
     max-height: 50vh;
     display: block;
     margin: 0 auto;
+    align-self: center;
 }
 
 html, body {
@@ -86,7 +88,6 @@ html, body {
 .content {
     width: 100%;
     max-width: 800px;
-    padding: 20px;
     margin: 0 auto;
     text-align: left;
 }
