@@ -28,10 +28,14 @@
             const events = jsyaml.load(yaml);
             const container = document.getElementById('events-container');
 
+            const safe = (val, fallback = 'N/A') => val || fallback;
+
             events.forEach(event => {
               const eventElement = document.createElement('div');
-              const mapLink = `https://maps.google.com/?q=${encodeURIComponent(event.location)}`;
-              const eventLink = event.eventPageLink;
+
+              // Map link (prefer YAML value if available)
+              const mapLink = event.mapsLink || `https://maps.google.com/?q=${encodeURIComponent(event.location)}`;
+              const eventLink = safe(event.eventPageLink, '#');
 
               // Format date
               const dateObj = new Date(event.date);
@@ -66,8 +70,13 @@
               <p><strong>Date:</strong> ${eventDate}</p>
               <p><strong>Time:</strong> ${timeRange}</p>
               <p><strong>Location:</strong> <a class="location-link" href="${mapLink}" target="_blank">${event.location}</a></p>
-              <p><strong>Description:</strong> ${event.description}</p>
-              <p><strong>Host:</strong> ${event.host || 'N/A'}</p>
+              <p><strong>Description:</strong> ${safe(event.description)}</p>
+              <p><strong>Host:</strong> ${safe(event.host)}</p>
+              <p><strong>Cost:</strong> ${safe(event.cost)}</p>
+              <p><strong>Tickets:</strong> ${safe(event.Tickets)}</p>
+              <p><strong>Age Restriction:</strong> ${safe(event.minimumAge)}</p>
+              <p><strong>Capacity:</strong> ${safe(event.capacity)}</p>
+              <p><strong>Accessibility:</strong> ${safe(event.accessibility)}</p>
               <p><a href="${eventLink}" target="_blank">More info</a></p>
               <hr>
             `;

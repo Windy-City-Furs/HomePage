@@ -1,25 +1,29 @@
-- name: Fur Ball 2024
-  location: Downtown Convention Center, Chicago
-  date: 2024-06-15
-  startTime: 2024-06-14T19:00:00
-  endTime: 2024-06-14T23:00:00
-  description: Annual gala for the furry community. Come join us for a night of fun and fur!
-  host: Fur Ball Chicago Team
+- name: Replay Lincoln Park - Paddy's Pub Pop-Up Bar
+  location: Replay Lincoln Park, Chicago
+  date: 2025-04-19
+  startTime: 2025-04-19T16:00:00
+  endTime: 2025-04-19T18:00:00
+  description: Join us for a fun-filled evening at Replay Lincoln Park, where furry friends gather to play games and socialize!
+  host: Windy City Furs with Replay Lincoln Park
   eventPageLink: events/event-template.html
-  cost: $20
-  capacity: 500
+  cost: Free (Almost all arcade games are free!)
+  tickets: N/A (Tip your bartender!)
+  minimumAge: 21+
+  capacity: 20
   accessibility: Wheelchair accessible
-  mapsLink: https://maps.google.com/?q=Downtown+Convention+Center,+Chicago
+  mapsLink: https://maps.google.com/?q=Replay+Lincoln+Park,+Chicago
 
-- name: Arcade Meet
-  location: Lincoln Park Arcade, Chicago
-  date: 2024-07-20
-  startTime: 2024-06-14T19:00:00
-  endTime: 2024-06-14T23:00:00
-  description: A daytime meetup at the arcade. Enjoy a furry gathering with friends new and old!
-  host: ChiFur Meetups
+- name: Hundreds of Furries
+  location: Music Box Theatre, Chicago
+  date: 2025-05-11
+  startTime: 2025-05-11T117:00:00
+  endTime: 2025-05-11T22:00:00
+  description: Suit up and scamper over to the Music Box Theatre for a one-of-a-kind screening of Hundreds of Beavers — but this time, it’s Hundreds of Furries! 🦝🦫🦊✨ Join fellow fursuiters and furry friends for a pawsitively hilarious film night. We’ll be filling the historic theater with tails, ears, and cheers as we celebrate this chaotic critter comedy in full fuzzy fashion. Don your suit, grab your friends, and let’s turn the Music Box into a den of fun! Costumes are highly encouraged but not required — bring your best furry energy!
+  host: Windy City Furs with Music Box Theatre
   eventPageLink: events/event-template.html
-  cost: Free (pay to play arcade games)
+  cost: Tickets to be announced.
+  tickets: TBD
+  minimumAge: PG-13 (If you're under 18 you will need a parent or guardian with you)
   capacity: 100
-  accessibility: Limited accessibility, contact for details
-  mapsLink: https://maps.google.com/?q=Lincoln+Park+Arcade,+Chicago
+  accessibility: Wheelchair accessible
+  mapsLink: https://maps.google.com/?q=Music+Box+Theatre,+Chicago
