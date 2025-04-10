@@ -7,6 +7,7 @@
     <title>Windy City Furs</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,15 +19,74 @@
     <img src="res/logos/wcf-logo-banner-lg.png" alt="Windy City Furs"/>
 </div>
 
+<div id="events-container"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('events-upcoming.yaml')
+      .then(response => response.text())
+      .then(yaml => {
+        const events = jsyaml.load(yaml)
+        const container = document.getElementById('events-container')
+
+        events.forEach(event => {
+          const eventElement = document.createElement('div')
+          const mapLink = `https://maps.google.com/?q=${encodeURIComponent(event.location)}`
+          const eventLink = event.eventPageLink
+
+          // Format date
+          const dateObj = new Date(event.date)
+          const eventDate = dateObj.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })
+
+          // Format start and end time
+          const startTime = event.startTime
+            ? new Date(event.startTime).toLocaleTimeString('en-US', {
+              hour: 'numeric',
+              minute: '2-digit',
+              hour12: true
+            })
+            : 'N/A'
+
+          const endTime = event.endTime
+            ? new Date(event.endTime).toLocaleTimeString('en-US', {
+              hour: 'numeric',
+              minute: '2-digit',
+              hour12: true
+            })
+            : 'N/A'
+
+          const timeRange = (startTime !== 'N/A' && endTime !== 'N/A') ? `${startTime} – ${endTime}` : 'N/A'
+
+          eventElement.innerHTML = `
+            <h3>${event.name}</h3>
+            <p><strong>Date:</strong> ${eventDate}</p>
+            <p><strong>Time:</strong> ${timeRange}</p>
+            <p><strong>Location:</strong> <a class="location-link" href="${mapLink}" target="_blank">${event.location}</a></p>
+            <p><strong>Description:</strong> ${event.description}</p>
+            <p><strong>Host:</strong> ${event.host || 'N/A'}</p>
+            <p><a href="${eventLink}" target="_blank">More info</a></p>
+            <hr>
+          `
+          container.appendChild(eventElement)
+        })
+      })
+      .catch(error => console.error('Error loading the events:', error))
+  })
+</script>
+
 <div class="carousel">
     <img src="res/racing.jpg" alt="Logan Arcade">
 </div>
 
-
 <div id="footer"></div>
 
 <script>
-  function loadFragment (id, url) {
+  function loadFragment(id, url) {
     fetch(url)
       .then(res => res.text())
       .then(html => {
@@ -45,13 +105,13 @@
     const slides = document.querySelectorAll('.slide')
     let currentIndex = 0
 
-    function showSlide (index) {
+    function showSlide(index) {
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === index)
       })
     }
 
-    function nextSlide () {
+    function nextSlide() {
       currentIndex = (currentIndex + 1) % slides.length
       showSlide(currentIndex)
     }
@@ -61,5 +121,4 @@
 </script>
 
 </body>
-
 </html>

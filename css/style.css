@@ -128,3 +128,18 @@ body {
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.2em;
 }
+
+#events-container {
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#events-container div {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+#events-container a {
+    color: blue;
+}
