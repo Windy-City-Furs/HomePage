@@ -1,0 +1,29 @@
+- name: Replay Lincoln Park - Paddy's Pub Pop-Up Bar
+  location: Replay Lincoln Park, Chicago
+  date: 2025-04-19
+  startTime: 2025-04-19T16:00:00
+  endTime: 2025-04-19T18:00:00
+  description: Join us for a fun-filled evening at Replay Lincoln Park, where furry friends gather to play games and socialize!
+  host: Windy City Furs with Replay Lincoln Park
+  eventPageLink: events/event-template.html
+  cost: Free (Almost all arcade games are free!)
+  tickets: N/A (Tip your bartender!)
+  minimumAge: 21+
+  capacity: 20
+  accessibility: Wheelchair accessible
+  mapsLink: https://maps.google.com/?q=Replay+Lincoln+Park,+Chicago
+
+- name: Hundreds of Furries
+  location: Music Box Theatre, Chicago
+  date: 2025-05-11
+  startTime: 2025-05-11T117:00:00
+  endTime: 2025-05-11T22:00:00
+  description: Suit up and scamper over to the Music Box Theatre for a one-of-a-kind screening of Hundreds of Beavers — but this time, it’s Hundreds of Furries! 🦝🦫🦊✨ Join fellow fursuiters and furry friends for a pawsitively hilarious film night. We’ll be filling the historic theater with tails, ears, and cheers as we celebrate this chaotic critter comedy in full fuzzy fashion. Don your suit, grab your friends, and let’s turn the Music Box into a den of fun! Costumes are highly encouraged but not required — bring your best furry energy!
+  host: Windy City Furs with Music Box Theatre
+  eventPageLink: events/event-template.html
+  cost: Tickets to be announced.
+  tickets: TBD
+  minimumAge: PG-13 (If you're under 18 you will need a parent or guardian with you)
+  capacity: 100
+  accessibility: Wheelchair accessible
+  mapsLink: https://maps.google.com/?q=Music+Box+Theatre,+Chicago

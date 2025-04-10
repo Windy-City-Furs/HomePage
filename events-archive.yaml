@@ -1,0 +1,29 @@
+- name: Windy City Furs Logan Arcade Kickoff Meetup
+  location: Logan Arcade, Chicago
+  date: 2025-02-02
+  startTime: 2025-02-02T16:00:00
+  endTime: 2025-02-02T18:00:00
+  description: Join us for a fun-filled evening at Logan Arcade, where furry friends gather to play games and socialize! This is our first meetup ever!
+  host: Windy City Furs with Logan Arcade
+  eventPageLink: events/event-template.html
+  cost: Free (pay to play arcade games)
+  tickets: N/A (Tip your bartender!)
+  minimumAge: 21+
+  capacity: 20
+  accessibility: Wheelchair accessible
+  mapsLink: https://maps.google.com/?q=Logan+Arcade,+Chicago
+
+- name: Second Logan Arcade Meetup
+  location: Logan Arcade, Chicago
+  date: 2025-03-02
+  startTime: 2025-03-02T16:00:00
+  endTime: 2025-03-02T18:00:00
+  description: We had a great time and were invited back for more fur-suiting, games, and fun!
+  host: Windy City Furs with Logan Arcade
+  eventPageLink: events/event-template.html
+  cost: Free (pay to play arcade games)
+  tickets: TBD
+  minimumAge: 21+
+  capacity: 20
+  accessibility: Wheelchair accessible
+  mapsLink: https://maps.google.com/?q=Logan+Arcade,+Chicago

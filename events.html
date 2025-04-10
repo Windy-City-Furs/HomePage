@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Windy City Furs</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,10 +16,78 @@
 <div id="header"></div>
 
 <div class="content">
-    <h1>Events</h1>
-    <p>Nice, you found the template</p>
-</div>
+    <h1>Past Events</h1>
 
+    <div id="events-container"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('events-archive.yaml')
+          .then(response => response.text())
+          .then(yaml => {
+            const events = jsyaml.load(yaml);
+            const container = document.getElementById('events-container');
+
+            const safe = (val, fallback = 'N/A') => val || fallback;
+
+            events.forEach(event => {
+              const eventElement = document.createElement('div');
+
+              // Map link (prefer YAML value if available)
+              const mapLink = event.mapsLink || `https://maps.google.com/?q=${encodeURIComponent(event.location)}`;
+              const eventLink = safe(event.eventPageLink, '#');
+
+              // Format date
+              const dateObj = new Date(event.date);
+              const eventDate = dateObj.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              });
+
+              // Format start and end time
+              const startTime = event.startTime
+                ? new Date(event.startTime).toLocaleTimeString('en-US', {
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  hour12: true
+                })
+                : 'N/A';
+
+              const endTime = event.endTime
+                ? new Date(event.endTime).toLocaleTimeString('en-US', {
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  hour12: true
+                })
+                : 'N/A';
+
+              const timeRange = (startTime !== 'N/A' && endTime !== 'N/A') ? `${startTime} – ${endTime}` : 'N/A';
+
+              eventElement.innerHTML = `
+              <h3>${event.name}</h3>
+              <p><strong>Date:</strong> ${eventDate}</p>
+              <p><strong>Time:</strong> ${timeRange}</p>
+              <p><strong>Location:</strong> <a class="location-link" href="${mapLink}" target="_blank">${event.location}</a></p>
+              <p><strong>Description:</strong> ${safe(event.description)}</p>
+              <p><strong>Host:</strong> ${safe(event.host)}</p>
+              <p><strong>Cost:</strong> ${safe(event.cost)}</p>
+              <p><strong>Tickets:</strong> ${safe(event.Tickets)}</p>
+              <p><strong>Age Restriction:</strong> ${safe(event.minimumAge)}</p>
+              <p><strong>Capacity:</strong> ${safe(event.capacity)}</p>
+              <p><strong>Accessibility:</strong> ${safe(event.accessibility)}</p>
+              <p><a href="${eventLink}" target="_blank">More info</a></p>
+              <hr>
+            `;
+              container.appendChild(eventElement);
+            });
+          })
+          .catch(error => console.error('Error loading the events:', error));
+      });
+    </script>
+
+</div>
 
 <div id="footer"></div>
 
@@ -57,5 +127,4 @@
 </script>
 
 </body>
-
 </html>
