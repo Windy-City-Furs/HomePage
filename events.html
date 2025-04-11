@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Windy City Furs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<div id="header"></div>
-
-<div class="content">
-    <h1>Past Events</h1>
-
-    <div id="events-container"></div>
-
-    <script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Windy City Furs</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+              rel="stylesheet" />
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="previous events" content="Windy City Furs past events.">
+    </head>
+    <body>
+        <div id="header"></div>
+        <div class="content">
+            <h1>Past Events</h1>
+            <div id="events-container"></div>
+            <script>
       document.addEventListener('DOMContentLoaded', function() {
         fetch('events-archive.yaml')
           .then(response => response.text())
@@ -85,13 +82,10 @@
           })
           .catch(error => console.error('Error loading the events:', error));
       });
-    </script>
-
-</div>
-
-<div id="footer"></div>
-
-<script>
+            </script>
+        </div>
+        <div id="footer"></div>
+        <script>
   function loadFragment(id, url) {
     fetch(url)
       .then(res => res.text())
@@ -104,9 +98,8 @@
     loadFragment('header', 'partials/header.html');
     loadFragment('footer', 'partials/footer.html');
   });
-</script>
-
-<script>
+        </script>
+        <script>
   document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     let currentIndex = 0;
@@ -124,7 +117,6 @@
 
     setInterval(nextSlide, 5000);
   });
-</script>
-
-</body>
+        </script>
+    </body>
 </html>

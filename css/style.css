@@ -49,27 +49,6 @@ h1, h2 {
     text-align: center;
 }
 
-.carousel img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 50vh;
-    display: block;
-    margin: 0 auto;
-}
-
-.carousel {
-    margin-bottom: 6px;
-    margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-    .carousel img {
-        width: 60%;
-        height: auto;
-    }
-}
-
 .content img {
     width: 80%;
     height: auto;
@@ -160,4 +139,9 @@ body {
 
 #events-container a {
     color: blue;
+}
+
+.logo {
+    width: 3421px;
+    height: 1024px;
 }

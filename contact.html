@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Windy City Furs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<div id="header"></div>
-
-<div class="content">
-    <h1>Contact Us</h1>
-    <p>We are still setting this up. Please directly message us on Bluesky</p>
-</div>
-
-
-<div id="footer"></div>
-
-<script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Windy City Furs</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+              rel="stylesheet" />
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="contact" content="Windy City Furs contact us page.">
+    </head>
+    <body>
+        <div id="header"></div>
+        <div class="content">
+            <h1>Contact Us</h1>
+            <p>We are still setting this up. Please directly message us on Bluesky</p>
+        </div>
+        <div id="footer"></div>
+        <script>
   function loadFragment(id, url) {
     fetch(url)
       .then(res => res.text())
@@ -35,9 +31,8 @@
     loadFragment('header', 'partials/header.html');
     loadFragment('footer', 'partials/footer.html');
   });
-</script>
-
-<script>
+        </script>
+        <script>
   document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     let currentIndex = 0;
@@ -55,8 +50,6 @@
 
     setInterval(nextSlide, 5000);
   });
-</script>
-
-</body>
-
+        </script>
+    </body>
 </html>

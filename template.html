@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Windy City Furs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
 <div id="header"></div>
-
 <div class="content">
     <h1>Template Page</h1>
     <p>Nice, you found the template</p>
 </div>
-
-
 <div id="footer"></div>
-
 <script>
-  function loadFragment(id, url) {
+  function loadFragment (id, url) {
     fetch(url)
       .then(res => res.text())
       .then(html => {
-        document.getElementById(id).innerHTML = html;
-      });
+        document.getElementById(id).innerHTML = html
+      })
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    loadFragment('header', 'partials/header.html');
-    loadFragment('footer', 'partials/footer.html');
-  });
+  document.addEventListener('DOMContentLoaded', function () {
+    loadFragment('header', 'partials/header.html')
+    loadFragment('footer', 'partials/footer.html')
+  })
 </script>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const slides = document.querySelectorAll('.slide');
-    let currentIndex = 0;
+  document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.slide')
+    let currentIndex = 0
 
-    function showSlide(index) {
+    function showSlide (index) {
       slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-      });
+        slide.classList.toggle('active', i === index)
+      })
     }
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
+    function nextSlide () {
+      currentIndex = (currentIndex + 1) % slides.length
+      showSlide(currentIndex)
     }
 
-    setInterval(nextSlide, 5000);
-  });
+    setInterval(nextSlide, 5000)
+  })
 </script>
-
 </body>
-
 </html>
