@@ -103,6 +103,7 @@ body {
     letter-spacing: 0.3px;
     font-family: 'Roboto', sans-serif;
 }
+
 .content {
     max-width: 800px;
 }
@@ -112,29 +113,45 @@ body {
     margin-bottom: 0.5em;
     text-align: center;
 }
+
 .content h2 {
     font-size: 1.5em;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     text-align: left;
 }
+
 .content ul {
     padding-left: 20px;
     margin-bottom: 1em;
 }
+
 .content li {
     margin-bottom: 0.5em;
 }
+
 .content h2 {
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.2em;
 }
 
 #events-container {
-    overflow-y: scroll;
-    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 10px;
+    border: 1px solid #ccc;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+    #events-container {
+        padding: 16px;
+        border: none;
+    }
+}
+
 
 #events-container div {
     border-bottom: 1px solid #eee;
