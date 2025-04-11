@@ -131,10 +131,23 @@ body {
 }
 
 #events-container {
-    overflow-y: scroll;
-    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 10px;
+    border: 1px solid #ccc;
+    overflow-y: auto; /* not scroll, this fixes weird scrollbars on mobile */
+    box-sizing: border-box; /* ensures padding doesn't shrink container */
 }
+
+@media (max-width: 768px) {
+    #events-container {
+        padding: 16px;
+        border: none;
+    }
+}
+
+
 
 #events-container div {
     border-bottom: 1px solid #eee;
