@@ -1,9 +1,14 @@
-name: Lint HTML, CSS, and JavaScript
+name: Lint Frontend Code
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   lint:
