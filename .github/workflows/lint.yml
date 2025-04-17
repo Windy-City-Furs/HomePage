@@ -1,0 +1,34 @@
+name: Lint Frontend Code
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  lint:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install linters via Homebrew
+        run: |
+          brew install quick-lint-js stylelint djlint
+
+      - name: Lint JavaScript files
+        run: |
+          find . -name "*.js" -print0 | xargs -0 quick-lint-js
+
+      - name: Lint CSS files
+        run: |
+          find . -name "*.css" -print0 | xargs -0 stylelint
+
+      - name: Lint HTML files
+        run: |
+          find . -name "*.html" -print0 | xargs -0 djlint --lint
